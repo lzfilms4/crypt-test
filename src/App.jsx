@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
         <button onClick={() => setModalActive(true)}>open</button>
-        <TV />
+        {/*<TV />*/}
         <Modal active={modalActive} setActive={setModalActive} />
     </div>
   )

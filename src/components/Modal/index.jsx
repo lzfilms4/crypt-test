@@ -7,7 +7,6 @@ const Modal = ({active, setActive}) => {
     return (
         <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
             <div className={active ? "content active" : "content"} onClick={e => e.stopPropagation()}>
-                <div className='bg'></div>
                 <div className='info'>
                     <div className='info-content'>
                         {/*<div className="bottomPerson"></div>*/}
@@ -49,7 +48,7 @@ const Modal = ({active, setActive}) => {
                                 <span>грабли, а также хорошенько развлечемся!</span>
                                 <div className="underline"></div>
 
-                                  <div className='br'> </div>
+                                <div className='br'> </div>
 
 
                             <span>Переходи на Crew3 и выполняй задания.</span>
@@ -66,7 +65,7 @@ const Modal = ({active, setActive}) => {
                                 </div>
                         </div>
                     </div>
-
+                    <div className='person'></div>
                 </div>
             </div>
         </div>
