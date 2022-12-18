@@ -58,7 +58,7 @@ const Modal = ({active, setActive}) => {
                                 <span>на победу. Удачи!</span>
                                 <div className="underline"></div>
 
-                                <div className='button'>
+                                <div className='button' onClick={() => setActive(false)}>
                                    <div className='button-text'>Перейти к заданиям</div>
                                     <div className='button-arrow'></div>
 

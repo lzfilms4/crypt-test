@@ -20,22 +20,65 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
-  max-width: 700px;
-  max-height: 700px;
+  //max-width: 700px;
+  //max-height: 700px;
+
+  @media screen and (max-width: 375px) {
+    width: 350px;
+    height: 350px;
+    top: 55%;
+    left: 60%;
+  }
+  @media screen and (min-width: 376px) and (max-width: 449px) {
+    width: 376px;
+    height: 376px;
+    top: 60%;
+    left: 60%;
+  }
+  @media screen and (min-width: 450px) and (max-width: 600px) {
+    width: 450px;
+    height: 450px;
+    top: 60%;
+    left: 60%;
+  }
+  @media screen and (min-width: 601px) and (max-width: 768px) {
+    width: 600px;
+    height: 600px;
+    top: 55%;
+    left: 60%;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+    width: 550px;
+    height: 550px;
+    top: 55%;
+  }
+  //@media screen and (min-width: 1280px) and (max-width: 1367px) {
+  //width: 650px;
+  //height: 650px;
+  //}
+  @media screen and (min-width: 1280px) and (max-width: 1919px) {
+    width: 550px;
+    height: 550px;
+    top: 50%;
+  }
+  @media screen and (min-width: 1920px) {
+    width: 700px;
+    height: 700px;
+  }
+
   width: 100%;
   height: 100%;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 1;
+  z-index: 0;
 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   margin-left: -40px;
-  .window{
-    z-index: 10;
+  .window-bg{
     background-image: url('../../assets/img/Mask group.png');
     background-color: black;
     margin-left: auto;
@@ -46,7 +89,22 @@
     position: absolute;
     top: 9%;
     width: 80%;
-    height: 65%;
+    height: 66%;
+    z-index: -100;
+
+  }
+  .window{
+    z-index: 10;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    top: 9%;
+    width: 80%;
+    height: 66%;
     .actionBtn{
       .bg{
         background-image: url('../../assets/img/windowBtnBg.png');
@@ -55,18 +113,19 @@
         background-repeat: no-repeat;
         background-size: contain;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-
+        //top: 50%;
+        //left: 50%;
+        //transform: translate(-50%,-50%);
       }
       .bgHover{
         z-index: 10;
         background-image: url('../../assets/img/hoverWindowBtn.png');
-        width: 100%;
-        height: 100%;
+        width: 102%;
+        height: 104%;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+        top: -3%;
+        left: -1%;
         position: absolute;
         opacity: 0;
         transition: 0.1s ease;
@@ -74,7 +133,6 @@
           opacity: 1;
 
         }
-
       }
       width: 60%;
       height: 19%;
@@ -85,7 +143,6 @@
       transform: translate(-50%,-50%);
       text-align: center;
       position: absolute;
-
       &-text{
         top: 50%;
         left: 50%;
@@ -98,6 +155,109 @@
         font-size: 3.2vh;
         line-height: 98px;
         color: #2F0400;
+        @media screen and (max-width: 600px) {
+          font-size: 2vh;
+        }
+      }
+    }
+    .info {
+      width: 70%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      position: relative;
+      &-count {
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%,0%);
+        text-align: center;
+        position: relative;
+        &-name {
+          padding-top: 5%;
+          font-family: 'Montserrat-Medium', sans-serif;
+          font-weight: 500;
+          font-size: 1.5vh;
+          line-height: 44px;
+          text-align: center;
+          color: #FD9002;
+        }
+        &-price {
+         background-image: url("../../assets/img/dollar.png");
+          background-position: center;
+          width: 90%;
+          height: 4vw;
+          @apply mx-auto;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+      .button {
+        margin-top: 1vh;
+        border: 1.25px solid #FFCE63;
+        border-radius: 10px;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        transition: 0.3s ease;
+        &:hover{
+          cursor: pointer;
+          background: #FFCD63;
+          .button-text {
+            color: #0A0A13;
+          }
+          .button-arrow {
+            background-image: url("../../assets/img/greenArrow.png");
+          }
+        }
+        &-text{
+          height: 100%;
+          padding-top: 3%;
+          @apply my-auto;
+          color: #FFF2D8;
+          font-weight: 500;
+          font-size: 1.5vh;
+          //line-height: 10px;
+          margin-left: 4%;
+        }
+        &-arrow {
+          @apply my-auto;
+          margin-right: 4%;
+          background-image: url("../../assets/img/orangeArrow.png");
+          height: 50%;
+          width: 9%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+      .support{
+        font-weight: 200;
+        font-size: 15px;
+        line-height: 44px;
+        color: #FFCE63;
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+      }
+      .all-supports{
+        width: 100%;
+        height: 35%;
+        .line {
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+          height: 50%;
+          padding-bottom: 1vh;
+          .sup{
+            width: 15%;
+            height: 80%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
       }
     }
   }
@@ -128,13 +288,23 @@
       width: 40%;
       @apply flex text-center justify-between;
       font-size: 2vh;
-
       .channel {
+        transition: 0.3s ease;
+        &:hover{
+          cursor: pointer;
+        }
         color: rgba(10, 10, 19, 0.75);
         max-width: 14%;
       }
     }
     .info {
+      &:hover{
+        cursor: pointer;
+      }
+      &.active{
+        background-image: url("../../assets/img/infoBtnActive.png");
+      }
+      transition: 0.3s ease;
       max-width: 10%;
       width: 100%;
       max-height: 61.81px;
@@ -143,6 +313,9 @@
       background-repeat: no-repeat;
       div {
         margin-top: 30%;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 1.2vh;
       }
     }
   }
