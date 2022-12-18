@@ -83,7 +83,7 @@ const TV = () => {
                 </div>
                 <div className='btns'>
                     {[...new Array(5)].map((e,i) => (
-                        <div className='channel '>
+                        <div key={i} className='channel'>
                             <img
                                 src={active === i ? btnActive : (i <= available-1) ? btnNotPicked : btn} onClick={()=> i <= available-1 ? setActive(i) : ''}
                                 alt=""/>

@@ -29,3 +29,10 @@
     min-height: 1046px;
   }
 }
+
+@media screen and (min-width: 376px) and (max-width: 449px) {
+  body, #root {
+    overflow: hidden;
+    position: fixed;
+  }
+}
