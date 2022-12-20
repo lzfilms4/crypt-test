@@ -50,21 +50,22 @@
   @media screen and (min-width: 769px) and (max-width: 1279px) {
     width: 550px;
     height: 550px;
-    top: 55%;
+    top: 50%;
+    position: absolute;
   }
-  //@media screen and (min-width: 1280px) and (max-width: 1367px) {
-  //width: 650px;
-  //height: 650px;
-  //}
+
   @media screen and (min-width: 1280px) and (max-width: 1919px) {
     width: 550px;
     height: 550px;
     top: 50%;
+    position: absolute;
+
   }
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1920px){
     width: 700px;
     height: 700px;
   }
+
 
   width: 100%;
   height: 100%;
@@ -93,6 +94,24 @@
     height: 66%;
     z-index: -100;
 
+  }
+  .gif0{
+    background-image: url('../../assets/img/gifs/g1.gif');
+  }
+  .gif1{
+    background-image: url('../../assets/img/gifs/g2.gif');
+  }
+  .gif2{
+    background-image: url('../../assets/img/gifs/g3.gif');
+  }
+  .gif3{
+    background-image: url('../../assets/img/gifs/g4.gif');
+  }
+  .gif4{
+    background-image: url('../../assets/img/gifs/g5.gif');
+  }
+  .gif6{
+    background-image: url('../../assets/img/Mask group.png');
   }
   .window{
     z-index: 10;
@@ -156,17 +175,56 @@
         font-size: 3.2vh;
         line-height: 98px;
         color: #2F0400;
-        @media screen and (max-width: 600px) {
-          font-size: 2vh;
+        @media screen and (max-width: 375px) {
+          font-size: 15px;
+        }
+        @media screen and (min-width: 376px) and (max-width: 449px) {
+          font-size: 15px;
+        }
+        @media screen and (min-width: 450px) and (max-width: 600px) {
+          font-size: 18px;
+        }
+        @media screen and (min-width: 601px) and (max-width: 768px) {
+          font-size: 22px;
+        }
+        @media screen and (min-width: 769px) and (max-width: 1279px) {
+          font-size: 25px;
+        }
+        @media screen and (min-width: 1280px) and (max-width: 1919px) {
+          font-size: 30px;
+        }
+        @media screen and (min-width: 1920px) {
+          font-size: 35px;
         }
       }
     }
     .info {
+
       width: 70%;
       height: 100%;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%,-40%);
+      @media screen and (max-width: 375px) {
+        transform: translate(-50%,-50%);
+
+      }
+      @media screen and (min-width: 376px) and (max-width: 449px) {
+        transform: translate(-50%,-50%);
+
+      }
+      @media screen and (min-width: 450px) and (max-width: 600px) {
+      }
+      @media screen and (min-width: 601px) and (max-width: 768px) {
+        transform: translate(-50%,-35%);
+
+      }
+      @media screen and (min-width: 769px) and (max-width: 1279px) {
+      }
+      @media screen and (min-width: 1280px) and (max-width: 1919px) {
+      }
+      @media screen and (min-width: 1920px) {
+      }
       text-align: center;
       position: relative;
       &-count {
@@ -183,6 +241,25 @@
           line-height: 44px;
           text-align: center;
           color: #FD9002;
+          @media screen and (max-width: 375px) {
+            font-size: 15px;
+          }
+          @media screen and (min-width: 376px) and (max-width: 449px) {
+            font-size: 15px;
+          }
+          @media screen and (min-width: 450px) and (max-width: 600px) {
+          }
+          @media screen and (min-width: 601px) and (max-width: 768px) {
+          }
+          @media screen and (min-width: 769px) and (max-width: 1279px) {
+            font-size: 15px;
+          }
+          @media screen and (min-width: 1280px) and (max-width: 1919px) {
+            font-size: 12px;
+          }
+          @media screen and (min-width: 1920px) {
+            font-size: 15px;
+          }
         }
         &-price {
          background-image: url("../../assets/img/dollar.png");
@@ -192,10 +269,17 @@
           @apply mx-auto;
           background-size: contain;
           background-repeat: no-repeat;
+          @media screen and (min-width: 1280px) and (max-width: 1919px) {
+            height: 40px;
+          }
+          @media screen and (min-width: 2000px) {
+            height: 100px;
+
+          }
         }
       }
       .button {
-        margin-top: 1vh;
+        margin-top: 15px;
         border: 1.25px solid #FFCE63;
         border-radius: 10px;
         height: 5vh;
@@ -203,6 +287,28 @@
         justify-content: space-between;
         width: 100%;
         transition: 0.3s ease;
+        @media screen and (max-width: 375px) {
+          height: 45px;
+        }
+        @media screen and (min-width: 376px) and (max-width: 449px) {
+          height: 45px;
+
+        }
+        @media screen and (min-width: 450px) and (max-width: 600px) {
+          height: 45px;
+        }
+        @media screen and (min-width: 601px) and (max-width: 768px) {
+          height: 45px;
+        }
+        @media screen and (min-width: 769px) and (max-width: 1279px) {
+          height: 45px;
+        }
+        @media screen and (min-width: 1280px) and (max-width: 1919px) {
+          height: 40px;
+        }
+        @media screen and (min-width: 1920px) {
+          height: 50px;
+        }
         &:hover{
           cursor: pointer;
           background: #FFCD63;
@@ -222,6 +328,28 @@
           font-size: 1.5vh;
           //line-height: 10px;
           margin-left: 4%;
+          @media screen and (max-width: 375px) {
+            font-size: 15px;
+          }
+          @media screen and (min-width: 376px) and (max-width: 449px) {
+            font-size: 15px;
+          }
+          @media screen and (min-width: 450px) and (max-width: 600px) {
+            font-size: 15px;
+          }
+          @media screen and (min-width: 601px) and (max-width: 768px) {
+            font-size: 15px;
+
+          }
+          @media screen and (min-width: 769px) and (max-width: 1279px) {
+            font-size: 15px;
+          }
+          @media screen and (min-width: 1280px) and (max-width: 1919px) {
+            font-size: 12px;
+          }
+          @media screen and (min-width: 1920px) {
+            font-size: 15px;
+          }
         }
         &-arrow {
           @apply my-auto;
@@ -238,25 +366,39 @@
         font-size: 15px;
         line-height: 44px;
         color: #FFCE63;
-        padding-top: 0.5vw;
+        padding-top: 1vw;
         padding-bottom: 0.5vw;
       }
       .all-supports{
         width: 100%;
         height: 35%;
+        display: flex;
+        justify-content: space-between;
+
         .line {
           display: flex;
           justify-content: space-around;
           width: 100%;
           height: 50%;
           padding-bottom: 1vh;
-          .sup{
-            width: 15%;
-            height: 80%;
-            img {
-              width: 100%;
-              height: 100%;
-            }
+
+          .logo1{
+            background-image: url("https://trustwallet.com/assets/images/media/assets/horizontal_blue.svg");
+            width: 100%;
+            height: 100%;
+            scale: (2);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .logo2{
+            background-image: url("https://beta.dequest.io/_nuxt/img/dequest-new-logo.de88df4.svg");
+            width: 100%;
+            height: 100%;
+            scale: (0.75);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
           }
         }
       }
@@ -291,6 +433,93 @@
       font-size: 2vh;
       .channel {
         transition: 0.3s ease;
+        .num0, .num1, .num2, .num3, .num4 {
+          @apply mx-auto;
+          margin-top: 4px;
+        }
+
+        @media screen and (max-width: 375px) {
+          .num0 {
+            margin-top: 6px;
+            width: 4px;
+            height: 10px;
+          }
+          .num1, .num2, .num3, .num4 {
+            margin-top: 6px;
+            width: 6px;
+            height: 10px;
+          }
+        }
+        @media screen and (min-width: 376px) and (max-width: 449px) {
+          .num0 {
+            margin-top: 6px;
+            width: 4px;
+            height: 10px;
+          }
+          .num1, .num2, .num3, .num4 {
+            margin-top: 6px;
+            width: 6px;
+            height: 10px;
+          }
+        }
+        @media screen and (min-width: 450px) and (max-width: 600px) {
+          .num0 {
+            margin-top: 6px;
+            width: 4px;
+            height: 10px;
+          }
+          .num1, .num2, .num3, .num4 {
+            margin-top: 6px;
+            width: 6px;
+            height: 10px;
+          }
+        }
+        @media screen and (min-width: 601px) and (max-width: 768px) {
+          .num0 {
+            margin-top: 6px;
+            width: 4px;
+            height: 10px;
+          }
+          .num1, .num2, .num3, .num4 {
+            margin-top: 6px;
+            width: 6px;
+            height: 10px;
+          }
+        }
+        @media screen and (min-width: 769px) and (max-width: 1279px) {
+          .num0 {
+            margin-top: 6px;
+            width: 4px;
+            height: 10px;
+          }
+          .num1, .num2, .num3, .num4 {
+            margin-top: 6px;
+            width: 6px;
+            height: 10px;
+          }
+        }
+        @media screen and (min-width: 1280px) and (max-width: 1919px) {
+          .num0 {
+            width: 4px;
+            height: 10px;
+          }
+          .num1, .num2, .num3, .num4 {
+            width: 6px;
+            height: 10px;
+          }
+        }
+        @media screen and (min-width: 1920px) {
+          .num0 {
+            width: 5px;
+            height: 14px;
+          }
+          .num1, .num2, .num3, .num4 {
+            width: 9px;
+            height: 14px;
+          }
+        }
+
+
         &:hover{
           cursor: pointer;
         }
