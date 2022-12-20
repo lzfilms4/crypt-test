@@ -18,8 +18,15 @@ import './index.scss'
 const nums = [
     num1, num2, num3, num4, num5
 ]
-const TV = ({day}) => {
-    const [active, setActive] = React.useState(0)
+const TV = ({day, setActive, setActive2, setActive3, setActive4, setActive5}) => {
+    const activities = [
+        setActive,
+        setActive2,
+        setActive3,
+        setActive4,
+        setActive5
+    ]
+    const [active, setActiveDay] = React.useState(0)
     const [available, setAvailable] = React.useState(3)
     return (
         <div className='TV'>
@@ -48,13 +55,11 @@ const TV = ({day}) => {
 
                     </div>
                 </div>) : (
-                    <a href="https://crypton2023cryptus.crew3.xyz/invite/hmWc-uzifQ_RPcAkeq4W1">
-                        <div className='actionBtn'>
+                        <div className='actionBtn' onClick={() => activities[active](true)}>
                             <div className='bg'></div>
                             <div className='bgHover'></div>
                             <div className='actionBtn-text'>День {active+1}</div>
                         </div>
-                    </a>
                 )
                 }
 
@@ -68,14 +73,14 @@ const TV = ({day}) => {
                     {[...new Array(5)].map((e,i) => (
                         <div key={i} className='channel'>
                             <img
-                                src={active === i ? btnActive : (i <= day-1) ? btnNotPicked : btn} onClick={()=> i <= day-1 ? setActive(i) : ''}
+                                src={active === i ? btnActive : (i <= day-1) ? btnNotPicked : btn} onClick={()=> i <= day-1 ? setActiveDay(i) : ''}
                                 alt=""/>
                             {/*<span>{i+1}</span>*/}
                             <img src={nums[i]} className={"num"+i.toString()} alt=""/>
                         </div>
                     ))}
                 </div>
-                <div className={active!==6? 'info' : 'info active'} onClick={()=> setActive(6)}>
+                <div className={active!==6? 'info' : 'info active'} onClick={()=> setActiveDay(6)}>
                     <div>INFO</div>
                 </div>
             </div>

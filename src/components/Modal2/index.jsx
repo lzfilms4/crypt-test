@@ -2,8 +2,7 @@ import React from 'react';
 
 import './index.scss'
 
-
-const Modal = ({active, setActive, date}) => {
+const Modal = ({active, setActive}) => {
     return (
         <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
             <div className={active ? "content active" : "content"} onClick={e => e.stopPropagation()}>
@@ -14,7 +13,7 @@ const Modal = ({active, setActive, date}) => {
                             <div className='image-bg'> </div>
                             <div className='image-card'>
                                 <div className='image-card-front'></div>
-                                <div className="image-card-back day1"></div>
+                                <div className='image-card-back day2'></div>
                             </div>
                             <div className='image-bg'> </div>
                             <div className='image-sticker'> </div>
@@ -57,6 +56,7 @@ const Modal = ({active, setActive, date}) => {
                                 <div className="underline"></div>
                                 <span>на победу. Удачи!</span>
                                 <div className="underline"></div>
+
 
                                 <a href="https://crypton2023cryptus.crew3.xyz/invite/hmWc-uzifQ_RPcAkeq4W1">
                                     <div className='button'>

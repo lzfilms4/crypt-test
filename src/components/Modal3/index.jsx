@@ -1,9 +1,17 @@
 import React from 'react';
 
+import openMe from "../../assets/img/popup/openMe.png"
 import './index.scss'
 
+const days = [
+    'image-card-back day1',
+    'image-card-back day2',
+    'image-card-back day3',
+    'image-card-back day4',
+    'image-card-back day5',
+]
 
-const Modal = ({active, setActive, date}) => {
+const Modal = ({active, setActive}) => {
     return (
         <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
             <div className={active ? "content active" : "content"} onClick={e => e.stopPropagation()}>
@@ -14,7 +22,7 @@ const Modal = ({active, setActive, date}) => {
                             <div className='image-bg'> </div>
                             <div className='image-card'>
                                 <div className='image-card-front'></div>
-                                <div className="image-card-back day1"></div>
+                                <div className='image-card-back day3'></div>
                             </div>
                             <div className='image-bg'> </div>
                             <div className='image-sticker'> </div>

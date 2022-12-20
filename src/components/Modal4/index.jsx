@@ -2,6 +2,13 @@ import React from 'react';
 
 import './index.scss'
 
+const days = [
+    'image-card-back day1',
+    'image-card-back day2',
+    'image-card-back day3',
+    'image-card-back day4',
+    'image-card-back day5',
+]
 
 const Modal = ({active, setActive, date}) => {
     return (
@@ -14,7 +21,7 @@ const Modal = ({active, setActive, date}) => {
                             <div className='image-bg'> </div>
                             <div className='image-card'>
                                 <div className='image-card-front'></div>
-                                <div className="image-card-back day1"></div>
+                                <div className='image-card-back day4'></div>
                             </div>
                             <div className='image-bg'> </div>
                             <div className='image-sticker'> </div>
@@ -58,12 +65,12 @@ const Modal = ({active, setActive, date}) => {
                                 <span>на победу. Удачи!</span>
                                 <div className="underline"></div>
 
-                                <a href="https://crypton2023cryptus.crew3.xyz/invite/hmWc-uzifQ_RPcAkeq4W1">
-                                    <div className='button'>
+                            <a href="https://crypton2023cryptus.crew3.xyz/invite/hmWc-uzifQ_RPcAkeq4W1">
+                                <div className='button'>
                                        <div className='button-text'>Перейти к заданиям</div>
                                         <div className='button-arrow'></div>
-                                    </div>
-                                </a>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div className='person'></div>
