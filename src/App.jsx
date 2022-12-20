@@ -30,7 +30,7 @@ function App() {
     //   setDay(5)
     // }
 
-    setDay(3)
+    setDay(5)
 
   }, [])
 

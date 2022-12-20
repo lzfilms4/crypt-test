@@ -22,7 +22,7 @@ const Modal = ({active, setActive}) => {
                             <div className='image-bg'> </div>
                             <div className='image-card'>
                                 <div className='image-card-front'></div>
-                                <div className='image-card-back day3'></div>
+                                <div className='image-card-back day5'></div>
                             </div>
                             <div className='image-bg'> </div>
                             <div className='image-sticker'> </div>
