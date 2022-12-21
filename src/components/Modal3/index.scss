@@ -1,4 +1,4 @@
-.modal{
+.modal3{
   height: 100vh;
   width: 100vw;
   //background-color: rgba(0,0,0,0.4);
@@ -332,14 +332,6 @@
               //transition: 0.3s ease;
               @media screen and (max-width: 480px) {
                 background-image: url("../../assets/img/popup/markSmallest.png");
-                &:hover{
-                  position: absolute;
-                  width: 100%;
-                  height: 100%;
-                  top: 0;
-                  left: 0;
-                  background-image: url("../../assets/img/popup/nft.png");
-                }
               }
               @media screen and (min-width: 1921px) and (max-width: 2560px) {
                 width: 140px;
@@ -348,6 +340,16 @@
               @media screen and (min-width: 2561px) {
                 width: 240px;
                 height: 103px;
+              }
+            }
+            @media screen and (max-width: 480px) {
+              .active {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-image: url("../../assets/img/popup/nfts/d3.jpg");
               }
             }
             &-text{

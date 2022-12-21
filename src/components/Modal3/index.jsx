@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import openMe from "../../assets/img/popup/openMe.png"
 import './index.scss'
@@ -12,8 +12,9 @@ const days = [
 ]
 
 const Modal = ({active, setActive}) => {
+    const [markActive, setMarkActive] = useState(false)
     return (
-        <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
+        <div className={active ? "modal3 active" : "modal3"} onClick={() => setActive(false)}>
             <div className={active ? "content active" : "content"} onClick={e => e.stopPropagation()}>
                 <div className='info'>
                     <div className='info-content'>
@@ -35,7 +36,8 @@ const Modal = ({active, setActive}) => {
                                     <div className='sender-text-name'>CRYPTON & CRYPTUS</div>
                                     <div className='sender-text-line'> </div>
                                 </div>
-                                <div className='sender-mark'></div>
+                                <div className={markActive ? 'sender-mark active' : 'sender-mark'} onClick={() => setMarkActive(!markActive)}></div>
+
                             </div>
                             <div className='hohoho'></div>
                                 <span>Привет, дорогой друг!</span>

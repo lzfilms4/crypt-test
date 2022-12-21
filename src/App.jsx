@@ -15,6 +15,13 @@ function App() {
   const [modalActive5, setModalActive5] = useState(false)
   const [day, setDay] = useState(0)
 
+    const modals = [
+        <Modal active={modalActive} setActive={setModalActive} key={1} />,
+        <Modal2 active={modalActive2} setActive={setModalActive2} key={2} />,
+        <Modal3 active={modalActive3} setActive={setModalActive3} key={3}/>,
+        <Modal4 active={modalActive4} setActive={setModalActive4} key={4}/>,
+        <Modal5 active={modalActive5} setActive={setModalActive5} key={5}/>
+    ]
 
   useEffect(() => {
     // if (Date.now() < 1000*1671728400){
@@ -30,7 +37,7 @@ function App() {
     //   setDay(5)
     // }
 
-    setDay(5)
+    setDay(3)
 
   }, [])
 
@@ -38,11 +45,15 @@ function App() {
   return (
     <div className="App">
         <TV day={day} setActive={setModalActive} setActive2={setModalActive2} setActive3={setModalActive3} setActive4={setModalActive4} setActive5={setModalActive5}/>
-        <Modal active={modalActive} setActive={setModalActive} />
-        <Modal2 active={modalActive2} setActive={setModalActive2} />
-        <Modal3 active={modalActive3} setActive={setModalActive3} />
-        <Modal4 active={modalActive4} setActive={setModalActive4} />
-        <Modal5 active={modalActive5} setActive={setModalActive5} />
+
+        {[...new Array(day)].map((e,i) => {
+            return (modals[i])
+        })}
+        {/*<Modal active={modalActive} setActive={setModalActive} />*/}
+        {/*<Modal2 active={modalActive2} setActive={setModalActive2} />*/}
+        {/*<Modal3 active={modalActive3} setActive={setModalActive3} />*/}
+        {/*<Modal4 active={modalActive4} setActive={setModalActive4} />*/}
+        {/*<Modal5 active={modalActive5} setActive={setModalActive5} />*/}
     </div>
   )
 }

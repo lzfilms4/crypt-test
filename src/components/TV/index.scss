@@ -289,13 +289,19 @@
         transition: 0.3s ease;
         @media screen and (max-width: 375px) {
           height: 45px;
+          width: 110%;
+          margin-left: -10px;
         }
         @media screen and (min-width: 376px) and (max-width: 449px) {
           height: 45px;
-
+          width: 110%;
+          margin-left: -10px;
         }
         @media screen and (min-width: 450px) and (max-width: 600px) {
           height: 45px;
+          width: 110%;
+          margin-left: -10px;
+
         }
         @media screen and (min-width: 601px) and (max-width: 768px) {
           height: 45px;
