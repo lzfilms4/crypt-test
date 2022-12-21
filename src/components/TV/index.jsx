@@ -46,13 +46,17 @@ const TV = ({day, setActive, setActive2, setActive3, setActive4, setActive5}) =>
                     </a>
                     <div className="support">При поддержке</div>
                     <div className="all-supports">
-                        <div className="line">
-                            <div className="logo1"></div>
+                        <div className='line1'>
+                            <div className="line">
+                               <a href='https://trustwallet.com/'><div className="logo1"></div></a>
+                            </div>
+                            <div className="line">
+                                <a href='https://beta.dequest.io/quests'> <div className="logo2"></div></a>
+                            </div>
                         </div>
-                        <div className="line">
-                            <div className="logo2"></div>
+                        <div className="line2">
+                            <a href='https://impossible.finance/'> <div className="logo3"></div></a>
                         </div>
-
                     </div>
                 </div>) : (
                         <div className='actionBtn' onClick={() => activities[active](true)}>

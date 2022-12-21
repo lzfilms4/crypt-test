@@ -36,7 +36,6 @@ function App() {
     // else {
     //   setDay(5)
     // }
-
     setDay(5)
 
   }, [])
@@ -49,11 +48,6 @@ function App() {
         {[...new Array(day)].map((e,i) => {
             return (modals[i])
         })}
-        {/*<Modal active={modalActive} setActive={setModalActive} />*/}
-        {/*<Modal2 active={modalActive2} setActive={setModalActive2} />*/}
-        {/*<Modal3 active={modalActive3} setActive={setModalActive3} />*/}
-        {/*<Modal4 active={modalActive4} setActive={setModalActive4} />*/}
-        {/*<Modal5 active={modalActive5} setActive={setModalActive5} />*/}
     </div>
   )
 }

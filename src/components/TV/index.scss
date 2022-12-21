@@ -377,40 +377,118 @@
         line-height: 44px;
         color: #FFCE63;
         padding-top: 1vw;
-        padding-bottom: 0.5vw;
       }
       .all-supports{
+        margin-top: -10px;
         width: 100%;
         height: 35%;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        .line1{
+          padding-left: 25px;
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 1vh;
+          .line {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 50%;
+            padding-bottom: 1vh;
+            a{
+              width: 100%;
+              height: 100%;
+              .logo1 {
+                background-image: url("https://trustwallet.com/assets/images/media/assets/horizontal_blue.svg");
+                width: 100%;
+                height: 100%;
+                scale: (2);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+              .logo2 {
+                background-image: url("https://beta.dequest.io/_nuxt/img/dequest-new-logo.de88df4.svg");
+                width: 100%;
+                height: 100%;
+                scale: (0.75);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
 
-        .line {
+
+
+
+            .logo3 {
+
+              background-image: url("https://impossible.finance/images/logo.svg");
+              width: 100%;
+              height: 100%;
+              scale: (0.75);
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+
+        }
+
+        .line2 {
           display: flex;
           justify-content: space-around;
           width: 100%;
           height: 50%;
           padding-bottom: 1vh;
-
-          .logo1{
-            background-image: url("https://trustwallet.com/assets/images/media/assets/horizontal_blue.svg");
+          margin-top: -100px;
+          a{
             width: 100%;
             height: 100%;
-            scale: (2);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            .logo3 {
+              background-image: url("https://impossible.finance/images/logo.svg");
+              width: 100%;
+              height: 100%;
+              scale: (0.55);
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
           }
-          .logo2{
-            background-image: url("https://beta.dequest.io/_nuxt/img/dequest-new-logo.de88df4.svg");
-            width: 100%;
-            height: 100%;
-            scale: (0.75);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+
+          @media screen and (max-width: 375px) {
+            margin-top: -55px;
+            scale: (1.25);
+          }
+          @media screen and (min-width: 376px) and (max-width: 449px) {
+            margin-top: -55px;
+            scale: (1);
+
+          }
+          @media screen and (min-width: 450px) and (max-width: 600px) {
+            margin-top: -70px;
+          }
+          @media screen and (min-width: 601px) and (max-width: 768px) {
+            margin-top: -80px;
+          }
+          @media screen and (min-width: 769px) and (max-width: 1279px) {
+            margin-top: -80px;
+          }
+
+          @media screen and (min-width: 1280px) and (max-width: 1919px) {
+            margin-top: -80px;
+
+          }
+          @media screen and (min-width: 1920px){
+            margin-top: -100px;
+
           }
         }
+
+
       }
     }
   }
