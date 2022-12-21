@@ -24,19 +24,18 @@ function App() {
     ]
 
   useEffect(() => {
-    // if (Date.now() < 1000*1671728400){
-    //   setDay(1)
-    // } else if (Date.now() < 1000*1671814800){
-    //   setDay(2)
-    // } else if (Date.now() < 1000*1671901200){
-    //   setDay(3)
-    // } else if (Date.now() < 1000*1671987600){
-    //   setDay(4)
-    // }
-    // else {
-    //   setDay(5)
-    // }
-    setDay(5)
+    if (Date.now() < 1000*1671728400){
+      setDay(1)
+    } else if (Date.now() < 1000*1671814800){
+      setDay(2)
+    } else if (Date.now() < 1000*1671901200){
+      setDay(3)
+    } else if (Date.now() < 1000*1671987600){
+      setDay(4)
+    }
+    else {
+      setDay(5)
+    }
 
   }, [])
 
